@@ -13,7 +13,7 @@
 
 ## Installation
 1. Place `chocotime.lua`,`vanatime.lua`, and `moon_phases.lua` in `addons/chocotime/`.
-2. Load the addon in-game using `!load chocotime`.
+2. Load the addon in-game using `/addon load chocotime`.
 
 ## Note
 - The repository includes a `VDI_Get_Moons.ps1` PowerShell script. **This file is not required for the addon to run.**

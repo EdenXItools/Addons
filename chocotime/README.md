@@ -17,8 +17,9 @@
 
 ## Note
 - The repository includes a `VDI_Get_Moons.ps1` PowerShell script. **This file is not required for the addon to run.**
-It was created as a precursor to the Lua implementation since the author is more experienced in PowerShell.
-The logic, including the $moonphases object, was created by the author of this addon.
+- `VDI_Get_Moons.ps1` was created as a precursor to the Lua implementation since the author is more experienced in PowerShell.
+- The logic from `VDI_Get_Moons.ps1` was then converted into lua for `chocotime.lua`
+- The logic, including the `$moonphases` powershell object and logic, was created by the author of this addon.
 
 ## Credits
 - Author: EdenXI Lover

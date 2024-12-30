@@ -1,13 +1,14 @@
 --[[
 * chocotime - Displays Vana'diel time, date, and moon phase on screen.
-* Author: Astos from Eden
-* Version: 1.6
+* Author: EdenXI Lover
+* Version: 1.0
 * Dependencies: Requires the vanatime.lua library and moon_phases.lua.
+* In game commands: '/chocotime blink' and '/chocotime visible'
 ]]
 
 _addon.author   = 'EdenXI Lover'
 _addon.name     = 'chocotime'
-_addon.version  = '1.0'
+_addon.version  = '1.1'
 
 require 'common'
 require 'vanatime'
@@ -16,6 +17,7 @@ local moon_phases = require('moon_phases')
 local font_object = nil -- Font object for displaying Vana'diel time and moon phase info
 local update_interval = 1 -- Time interval for updating the display in seconds
 local last_update_time = 0 -- Tracks last update to ensure updates occur only once per interval
+local is_visible = true -- Tracks visibility state of the font object
 
 ----------------------------------------------------------------------------------------------------
 -- initialize_font
@@ -30,7 +32,36 @@ local function initialize_font()
     font_object:SetPositionX(100) -- X position on the screen
     font_object:SetPositionY(100) -- Y position on the screen
     font_object:SetText('')
+    font_object:SetVisibility(is_visible)
+end
+
+----------------------------------------------------------------------------------------------------
+-- toggle_visibility
+-- Toggles the visibility of the font object and displays a message indicating the current state.
+----------------------------------------------------------------------------------------------------
+local function toggle_visibility()
+    is_visible = not is_visible
+    font_object:SetVisibility(is_visible)
+    print(string.format('Chocotime is now %s.', is_visible and 'visible' or 'hidden'))
+end
+
+----------------------------------------------------------------------------------------------------
+-- blink_display
+-- Temporarily displays the font object for 10 seconds, then hides it again.
+----------------------------------------------------------------------------------------------------
+local function blink_display()
+    if is_visible then
+        print('Chocotime is already visible. You can hide chocotime by typeing "/chocotime visible".  Blink works when chocotime is invisible.')
+        return
+    end
+
     font_object:SetVisibility(true)
+    --print('Chocotime is now visible temporarily. Will hide after 10 seconds.')
+
+    ashita.timer.once(10, function()
+        font_object:SetVisibility(false)
+        --print('Chocotime is now hidden again.')
+    end)
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -149,6 +180,34 @@ ashita.register_event('render', function()
         update_vanadiel_time()
         last_update_time = current_time
     end
+end)
+
+----------------------------------------------------------------------------------------------------
+-- command_event
+-- Handles commands sent to the addon.
+----------------------------------------------------------------------------------------------------
+ashita.register_event('command', function(command, ntype)
+    local args = command:args()
+    if not args or args[1]:lower() ~= '/chocotime' then
+        return false
+    end
+
+    if #args < 2 then
+        print('Invalid command. Usage: /chocotime [visible|blink]')
+        return true
+    end
+
+    local subcommand = args[2]:lower()
+
+    if subcommand == 'visible' then
+        toggle_visibility()
+    elseif subcommand == 'blink' then
+        blink_display()
+    else
+        print('Unknown subcommand. Usage: /chocotime [visible|blink]')
+    end
+
+    return true
 end)
 
 ----------------------------------------------------------------------------------------------------

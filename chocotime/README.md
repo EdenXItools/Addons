@@ -15,7 +15,8 @@
 - `VDI_Get_Moons.ps1` was created as a precursor to the Lua implementation since the author is more experienced in PowerShell.
 - The logic, including the `$moonphases` powershell object and logic, was created by the author of this addon.
 - The logic from `VDI_Get_Moons.ps1` was then converted into lua for `chocotime.lua`
-- The `Vanatime.lua` library was not created by the author of chocotime.  
+- Chocotime calculates down to the Vana'diel minute.
+- - This results in odd looking decriments to the time left for new moon and next phase.
 
 ## Credits
 - Chocotime Author: EdenXI Lover

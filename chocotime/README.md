@@ -2,13 +2,8 @@
 
 **Chocotime** is an Ashita v3 addon that displays the Vana'diel moon phase information on screen for Final Fantasy XI.
 
-## Features
-- Displays Vana'diel time, date, and moon phase.
-- Visibility toggle with `/chocotime visible`.
-- Blink mode to temporarily show the display with `/chocotime blink`.
-
 ## Requirements
-- Ashita v4.
+- Ashita v3.
 - `vanatime.lua` library.
 - `moon_phases.lua` data.
 

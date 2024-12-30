@@ -23,7 +23,7 @@
   - If there are a few requests for this, I can look into it.
 - This addon was created to be very PC and server friendly.  It is server friendly because it does all the calculation locally, only getting the current VD date/time utilizing vanatime.lua.  It is PC friendly because it executes simple functions, only once per second.  A potato PC would be able to handle this addon easily.
 - `VD 1468-07-07 00:00` (yyyy-mm-dd hh:mm Vana'diel time) was used as a basis for calculations.  A vana'diel lunar cycle is 84 days (see credits below for source).  I created a table with information for each of those days which considers day 1 of a lunar cycle to be `Full Moon (90%)`.  `VD 1468-07-07` was known by me to be day 1 (Full Moon 90%) of a cycle.
-- Pyogenes very kindly offers to let anyone use their js code as long as they are given credit.  While I did not use their code at all, I did use their site (see credits below) to ensure my addon was accurate.  I've also used pyogenes for many years.  For these reasons, I feel they deserver a shoutout.
+- Pyogenes very kindly offers to let anyone use their js code as long as they are given credit.  While I did not use their code at all, I did use their site (see credits below) to ensure my addon was accurate.  I've also used pyogenes for many years.  For these reasons, I feel they deserve a shoutout.
 
 ## Credits
 - Chocotime Author: EdenXI Lover

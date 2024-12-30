@@ -19,4 +19,4 @@
 
 ## Credits
 - Chocotime Author: EdenXI Lover
-- Thank you to whoever created `vanatime.lua`.  It made this addon much easier to create.
+- A huge thank you to atom0s for creating `vanatime.lua` which is utilized by this simple addon!

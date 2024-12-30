@@ -5,9 +5,9 @@
 * Dependencies: Requires the vanatime.lua library and moon_phases.lua.
 ]]
 
-_addon.author   = 'Astos from Eden'
+_addon.author   = 'EdenXI Lover'
 _addon.name     = 'chocotime'
-_addon.version  = '1.6'
+_addon.version  = '1.0'
 
 require 'common'
 require 'vanatime'

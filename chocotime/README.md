@@ -16,7 +16,7 @@
 - The logic, including the `$moonphases` powershell object and logic, was created by the author of this addon.
 - The logic from `VDI_Get_Moons.ps1` was then converted into lua for `chocotime.lua`
 - Chocotime calculates down to the Vana'diel minute.
-- - This results in odd looking decriments to the time left for new moon and next phase.
+  - This results in odd looking decriments to the time left for new moon and next phase.
 
 ## Credits
 - Chocotime Author: EdenXI Lover

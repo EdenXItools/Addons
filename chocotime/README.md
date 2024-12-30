@@ -12,7 +12,7 @@
 - `/chocotime blink` - Temporarily shows the display for 10 seconds.
 
 ## Installation
-1. Place `chocotime.lua`,`vanatime.lua`, and `moon_phases.lua` in `addons/chocotime/`.
+1. Place `chocotime.lua`, `vanatime.lua`, and `moon_phases.lua` in `addons/chocotime/`.
 2. Load the addon in-game using `/addon load chocotime`.
 
 ## Note

@@ -25,3 +25,4 @@
 ## Credits
 - Chocotime Author: EdenXI Lover
 - A huge thank you to atom0s for creating `vanatime.lua` which is utilized by Chocotime!
+- This addon was created to be very PC and server friendly.  It is server friendly because it does all the calculation locally, only getting the current VD date/time utilizing vanatime.lua.  It is PC friendly because it executes simple functions, only once per second.  A potato PC would be able to handle this addon easily.

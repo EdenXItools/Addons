@@ -21,8 +21,9 @@
   - It is still 100% accurate based on the VD hh:mm.
   - A future version which calculates down to the VD second (hh:mm:ss) may be possible and would result in a more human friendly/expected timer countdown.
   - If there are a few requests for this, I can look into it.
+- This addon was created to be very PC and server friendly.  It is server friendly because it does all the calculation locally, only getting the current VD date/time utilizing vanatime.lua.  It is PC friendly because it executes simple functions, only once per second.  A potato PC would be able to handle this addon easily.
 
 ## Credits
 - Chocotime Author: EdenXI Lover
 - A huge thank you to atom0s for creating `vanatime.lua` which is utilized by Chocotime!
-- This addon was created to be very PC and server friendly.  It is server friendly because it does all the calculation locally, only getting the current VD date/time utilizing vanatime.lua.  It is PC friendly because it executes simple functions, only once per second.  A potato PC would be able to handle this addon easily.
+

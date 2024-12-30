@@ -16,7 +16,7 @@
 - The logic, including the `$moonphases` powershell object and logic, was created by the author of this addon.
 - The logic from `VDI_Get_Moons.ps1` was then converted into lua for `chocotime.lua`
 - Chocotime calculates down to the Vana'diel minute, not the second.
-  - This results in odd looking decriments to the time left for new moon and next phase, decrimenting every 2-3 seconds by 2-3.
+  - This results in odd looking decriments to the new moon and next phase timers, decrimenting every 2-3 seconds by 2-3 instead of decrimenting by 1 second every second.
   - This is because one VD minute is 2.4 seconds earth time.
   - It is still 100% accurate based on the VD hh:mm.
   - A future version which calculates down to the VD second (hh:mm:ss) may be possible and would result in a more human friendly/expected timer countdown.
